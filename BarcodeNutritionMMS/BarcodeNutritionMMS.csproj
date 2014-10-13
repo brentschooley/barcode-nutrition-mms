@@ -121,6 +121,8 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\BarcodeNutrition.pubxml" />
+    <None Include="Properties\PublishProfiles\barcodenutritionmms.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

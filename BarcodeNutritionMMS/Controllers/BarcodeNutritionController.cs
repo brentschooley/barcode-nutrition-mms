@@ -19,8 +19,8 @@ namespace BarcodeNutritionMMS.Controllers
 {
     public class BarcodeNutritionController : Controller
     {
-        private string _nutritionixId = Environment.GetEnvironmentVariable("NutritionixAppId");
-        private string _nutritionixKey = Environment.GetEnvironmentVariable("NutritionixKey");
+        private string _nutritionixId = "[Your Nutritionix Application ID]";
+        private string _nutritionixKey = "[Your Nutritionix Application Key]";
 
         public async Task<ActionResult> Inbound(int numMedia, string body)
         {
@@ -177,7 +177,7 @@ namespace BarcodeNutritionMMS.Controllers
         private string GetSingleItemNutrition(Item foodItem)
         {
             return String.Format(
-                    "Here are the totals for {0} {1}: {2} calories, {3}g protein, {4}g total carbohydrates, {5}g total fat.",
+                    "Here are the details for {0} {1}: {2} calories, {3}g protein, {4}g total carbohydrates, {5}g total fat.",
                     foodItem.BrandName,
                     foodItem.Name,
                     foodItem.NutritionFact_Calories,
